@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Crypto_ChallengeApp: App {
+    @State var cModel = CoinsModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CoinListView()
+                .environment(cModel)
         }
     }
 }
